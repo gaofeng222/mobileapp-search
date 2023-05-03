@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>移动端深入研究</title>
-    <style>* {
+    <title>移动端深入研究之轮播图</title>
+    <style id="css">* {
   margin: 0;
   padding: 0;
 }
@@ -21,96 +21,86 @@ body {
 }
 
 #wrap {
-  width: 100%;
-  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+#list {
+  list-style: none;
   position: absolute;
   top: 0;
   left: 0;
 }
 
-#scroll {
+#list li {
+  float: left;
+}
+
+#list li img {
   width: 100%;
+  display: block;
+}
+
+#nav {
+  width: 100%;
+  text-align: center;
+  line-height: 10px;
   position: absolute;
-  top: 0;
+  bottom: 3px;
   left: 0;
+}
+
+#nav span {
+  width: 10px;
+  height: 10px;
+  background-color: #c00;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+#nav span.active {
+  background-color: green;
 }
 
 </style>
   </head>
   <body>
     <div id="wrap">
-      <div id="scroll">
-        <p>移动端的深入研究.......</p>
-        <p>移动端的深入研究.......</p>
-        <p>移动端的深入研究.......</p>
-        <p>移动端的深入研究.......</p>
-        <p>移动端的深入研究.......</p>
-        <p>移动端的深入研究.......</p>
-        <p>移动端的深入研究.......</p>
-        <p>移动端的深入研究.......</p>
-        <p>移动端的深入研究.......</p>
-        <p>移动端的深入研究.......</p>
-        <p>移动端的深入研究.......</p>
-        <p>移动端的深入研究.......</p>
-        <p>移动端的深入研究.......</p>
-        <p>移动端的深入研究.......</p>
-        <p>移动端的深入研究.......</p>
-        <p>移动端的深入研究.......</p>
-        <p>移动端的深入研究.......</p>
-        <p>移动端的深入研究.......</p>
-        <p>移动端的深入研究.......</p>
-        <p>移动端的深入研究.......</p>
-        <p>移动端的深入研究.......</p>
-        <p>移动端的深入研究.......</p>
-        <p>移动端的深入研究.......</p>
-        <p>移动端的深入研究.......</p>
-        <p>移动端的深入研究.......</p>
-        <p>移动端的深入研究.......</p>
-        <p>移动端的深入研究.......</p>
-        <p>移动端的深入研究.......</p>
-        <p>移动端的深入研究.......</p>
-        <p>移动端的深入研究.......</p>
-        <p>移动端的深入研究.......</p>
-        <p>移动端的深入研究.......</p>
-        <p>移动端的深入研究.......</p>
-        <p>移动端的深入研究.......</p>
-        <p>移动端的深入研究.......</p>
-        <p>移动端的深入研究.......</p>
-        <p>移动端的深入研究.......</p>
-        <p>移动端的深入研究.......</p>
-        <p>移动端的深入研究.......</p>
-        <p>移动端的深入研究.......</p>
-        <p>移动端的深入研究.......</p>
-        <p>移动端的深入研究.......</p>
-        <p>移动端的深入研究.......</p>
-        <p>移动端的深入研究.......</p>
-        <p>移动端的深入研究.......</p>
-        <p>移动端的深入研究.......</p>
-        <p>移动端的深入研究.......</p>
-        <p>移动端的深入研究.......</p>
-        <p>移动端的深入研究.......</p>
-        <p>移动端的深入研究.......</p>
-        <p>移动端的深入研究.......</p>
-        <p>移动端的深入研究.......</p>
-        <p>移动端的深入研究.......</p>
-        <p>移动端的深入研究.......</p>
-        <p>移动端的深入研究.......</p>
-        <p>移动端的深入研究.......</p>
-        <p>移动端的深入研究.......</p>
-        <p>移动端的深入研究.......</p>
-        <p>移动端的深入研究.......</p>
-        <p>移动端的深入研究.......</p>
-        <p>移动端的深入研究.......</p>
-        <p>移动端的深入研究.......</p>
-        <p>移动端的深入研究.......</p>
-        <p>移动端的深入研究.......</p>
-        <p>移动端的深入研究.......</p>
-        <p>移动端的深入研究.......</p>
-        <p>移动端的深入研究.......</p>
-        <p>移动端的深入研究.......</p>
-        <p>移动端的深入研究2222.......</p>
-      </div>
+      <ul id="list">
+        <li>
+          <a href="#">
+            <img src="/1.a45131b3.jpg" alt="">
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="/2.cccf08ef.jpg" alt="">
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="/3.3ef41889.jpg" alt="">
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="/4.0e5501ba.jpg" alt="">
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="/5.f63eb06a.jpg" alt="">
+          </a>
+        </li>
+      </ul>
+      <nav id="nav">
+        <span class="active"></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </nav>
     </div>
-    <script src="/index.8471a5d1.js" defer=""></script>
+    <script src="/index.8006b795.js" defer=""></script>
   </body>
 </html>

@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>移动端深入研究</title>
-    <style>
+    <title>移动端深入研究之轮播图</title>
+    <style id="css">
       * {
         padding: 0;
         margin: 0;
@@ -19,94 +19,80 @@
         overflow: hidden;
       }
       #wrap {
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
+        position: relative;
+        overflow: hidden;
       }
-      #scroll {
+      #list {
+        position: absolute;
+        top: 0;
+        left: 0;
+        list-style: none;
+        /* transition: all 0.5s ease-in; */
+      }
+      #list li {
+        float: left;
+      }
+      #list li img {
+        width: 100%;
+        display: block;
+      }
+      #nav {
         position: absolute;
         left: 0;
-        top: 0;
+        bottom: 3px;
         width: 100%;
+        line-height: 10px;
+        text-align: center;
+      }
+      #nav span {
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        background-color: #c00;
+        border-radius: 50%;
+      }
+      #nav span.active {
+        background-color: green;
       }
     </style>
   </head>
   <body>
     <div id="wrap">
-      <div id="scroll">
-        <p>移动端的深入研究.......</p>
-        <p>移动端的深入研究.......</p>
-        <p>移动端的深入研究.......</p>
-        <p>移动端的深入研究.......</p>
-        <p>移动端的深入研究.......</p>
-        <p>移动端的深入研究.......</p>
-        <p>移动端的深入研究.......</p>
-        <p>移动端的深入研究.......</p>
-        <p>移动端的深入研究.......</p>
-        <p>移动端的深入研究.......</p>
-        <p>移动端的深入研究.......</p>
-        <p>移动端的深入研究.......</p>
-        <p>移动端的深入研究.......</p>
-        <p>移动端的深入研究.......</p>
-        <p>移动端的深入研究.......</p>
-        <p>移动端的深入研究.......</p>
-        <p>移动端的深入研究.......</p>
-        <p>移动端的深入研究.......</p>
-        <p>移动端的深入研究.......</p>
-        <p>移动端的深入研究.......</p>
-        <p>移动端的深入研究.......</p>
-        <p>移动端的深入研究.......</p>
-        <p>移动端的深入研究.......</p>
-        <p>移动端的深入研究.......</p>
-        <p>移动端的深入研究.......</p>
-        <p>移动端的深入研究.......</p>
-        <p>移动端的深入研究.......</p>
-        <p>移动端的深入研究.......</p>
-        <p>移动端的深入研究.......</p>
-        <p>移动端的深入研究.......</p>
-        <p>移动端的深入研究.......</p>
-        <p>移动端的深入研究.......</p>
-        <p>移动端的深入研究.......</p>
-        <p>移动端的深入研究.......</p>
-        <p>移动端的深入研究.......</p>
-        <p>移动端的深入研究.......</p>
-        <p>移动端的深入研究.......</p>
-        <p>移动端的深入研究.......</p>
-        <p>移动端的深入研究.......</p>
-        <p>移动端的深入研究.......</p>
-        <p>移动端的深入研究.......</p>
-        <p>移动端的深入研究.......</p>
-        <p>移动端的深入研究.......</p>
-        <p>移动端的深入研究.......</p>
-        <p>移动端的深入研究.......</p>
-        <p>移动端的深入研究.......</p>
-        <p>移动端的深入研究.......</p>
-        <p>移动端的深入研究.......</p>
-        <p>移动端的深入研究.......</p>
-        <p>移动端的深入研究.......</p>
-        <p>移动端的深入研究.......</p>
-        <p>移动端的深入研究.......</p>
-        <p>移动端的深入研究.......</p>
-        <p>移动端的深入研究.......</p>
-        <p>移动端的深入研究.......</p>
-        <p>移动端的深入研究.......</p>
-        <p>移动端的深入研究.......</p>
-        <p>移动端的深入研究.......</p>
-        <p>移动端的深入研究.......</p>
-        <p>移动端的深入研究.......</p>
-        <p>移动端的深入研究.......</p>
-        <p>移动端的深入研究.......</p>
-        <p>移动端的深入研究.......</p>
-        <p>移动端的深入研究.......</p>
-        <p>移动端的深入研究.......</p>
-        <p>移动端的深入研究.......</p>
-        <p>移动端的深入研究.......</p>
-        <p>移动端的深入研究.......</p>
-        <p>移动端的深入研究2222.......</p>
-      </div>
+      <ul id="list">
+        <li>
+          <a href="#">
+            <img src="./img/1.jpg" alt="" />
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="./img/2.jpg" alt="" />
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="./img/3.jpg" alt="" />
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="./img/4.jpg" alt="" />
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="./img/5.jpg" alt="" />
+          </a>
+        </li>
+      </ul>
+      <nav id="nav">
+        <span class="active"></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </nav>
     </div>
-    <script src="./js/c1.js" type="module"></script>
+    <script src="./js/c6.js" type="module"></script>
   </body>
 </html>
